@@ -2,7 +2,7 @@ import React from 'react'
 
 function Home() {
   return (
-    <div>
+    <div className="container text-center vh-100">
       <h1>Welcome to Your Diary</h1>
       <a href="/login">Log in</a>
       <p>Or</p>
