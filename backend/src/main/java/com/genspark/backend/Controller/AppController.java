@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class AppController {
 
@@ -18,5 +20,10 @@ public class AppController {
     @PostMapping("/signup")
     public User registerUser(@RequestBody User user) {
         return this.customUserDetailsService.registerUser(user);
+    }
+
+    @GetMapping("/users")
+    public List<User> getUsers() {
+        return this.customUserDetailsService.getUsers();
     }
 }
